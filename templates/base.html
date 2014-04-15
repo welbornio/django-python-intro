@@ -1,0 +1,55 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Hotel Reviews{% endblock title %}</title>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+
+    <body>
+        <div class="page-wrapper">
+            <!-- header-11 -->
+            <header>
+              <nav class="navbar navbar-default" role="navigation">
+							  <div class="container-fluid">
+							    <!-- Brand and toggle get grouped for better mobile display -->
+							    <div class="navbar-header">
+							      <a class="navbar-brand" href="#">Hotel Reviews</a>
+							    </div>
+
+							    <!-- Collect the nav links, forms, and other content for toggling -->
+							    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							      <ul class="nav navbar-nav">
+							        <li class="dropdown">
+							          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Look Around <b class="caret"></b></a>
+							          <ul class="dropdown-menu">
+							            <li><a href="{% url 'home' %}">Home</a></li>
+							            <li><a href="{% url 'about' %}">About</a></li>
+							            <li><a href="{% url 'reviews' %}">Reviews</a></li>
+							          </ul>
+							        </li>
+							      </ul>
+							    </div><!-- /.navbar-collapse -->
+							  </div><!-- /.container-fluid -->
+							</nav>
+            </header>
+
+            <div class='container'>
+            	{% block content %}
+        			{% endblock content %}
+            </div>
+
+        </div>
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>
