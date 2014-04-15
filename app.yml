@@ -2,15 +2,23 @@ application: ethan-hotelreviews
 version: 1
 runtime: python27
 api_version: 1
-threadsafe: yes
+threadsafe: no
 
 handlers:
+
+- url: /_ah/login_required
+  script: do_openid_login.py
 
 - url: /static
   static_dir: static
 
 - url: /.*
   script: main.application
+  login: required
+
+- url: /.*
+  script: main.application
+
 
 libraries:
 

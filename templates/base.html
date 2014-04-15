@@ -10,6 +10,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-49932849-1', 'ethan-hotelreviews.appspot.com');
+          ga('require', 'displayfeatures');
+          ga('send', 'pageview');
+        </script>
     </head>
 
     <body>
@@ -17,32 +28,32 @@
             <!-- header-11 -->
             <header>
               <nav class="navbar navbar-default" role="navigation">
-							  <div class="container-fluid">
-							    <!-- Brand and toggle get grouped for better mobile display -->
-							    <div class="navbar-header">
-							      <a class="navbar-brand" href="#">Hotel Reviews</a>
-							    </div>
+    			  <div class="container-fluid">
+    			    <!-- Brand and toggle get grouped for better mobile display -->
+    			    <div class="navbar-header">
+    			      <a class="navbar-brand" href="#">Hotel Reviews</a>
+    			    </div>
 
-							    <!-- Collect the nav links, forms, and other content for toggling -->
-							    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							      <ul class="nav navbar-nav">
-							        <li class="dropdown">
-							          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Look Around <b class="caret"></b></a>
-							          <ul class="dropdown-menu">
-							            <li><a href="{% url home %}">Home</a></li>
-							            <li><a href="{% url about %}">About</a></li>
-							            <li><a href="{% url reviews %}">Reviews</a></li>
-							          </ul>
-							        </li>
-							      </ul>
-							    </div><!-- /.navbar-collapse -->
-							  </div><!-- /.container-fluid -->
-							</nav>
+    			    <!-- Collect the nav links, forms, and other content for toggling -->
+    			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    			      <ul class="nav navbar-nav">
+    			        <li class="dropdown">
+    			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Look Around <b class="caret"></b></a>
+    			          <ul class="dropdown-menu">
+    			            <li><a href="{% url home %}">Home</a></li>
+    			            <li><a href="{% url about %}">About</a></li>
+    			            <li><a href="{% url reviews %}">Reviews</a></li>
+    			          </ul>
+    			        </li>
+    			      </ul>
+    			    </div><!-- /.navbar-collapse -->
+    			  </div><!-- /.container-fluid -->
+    			</nav>
             </header>
 
             <div class='container'>
             	{% block content %}
-        			{% endblock content %}
+    			{% endblock content %}
             </div>
 
         </div>
