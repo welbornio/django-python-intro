@@ -1,0 +1,36 @@
+/*
+	Global Styles
+ */
+.masthead {
+	background:#D9E9FF;
+	padding:100px 0;
+	text-align: center;
+}
+.header-xlg {
+	font-size:70px;
+	padding:50px 0;
+}
+.header-lg {
+	font-size:50px;
+}
+.features {
+	padding:50px 0;
+}
+
+/*
+	Reviews Page
+ */
+.review-node {
+	overflow: hidden;
+}
+#search-filter {
+	margin-left:10px;
+}
+
+/*
+	Single Review Page
+ */
+.map {
+	width:100%;
+	height:400px;
+}

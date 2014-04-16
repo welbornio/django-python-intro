@@ -4,10 +4,11 @@ $(function() {
 		return;
 	}
 
+	// Give a visual aid of stars when sliding star rating range around
 	var changeNumStars = function changeNumStars() {
-		var numStars, stars, i, glyphClass;
+		var numStars, $stars, i, glyphClass;
 		numStars = parseInt($('#stars').val());
-		stars = $('<p>');
+		$stars = $('<p>');
 
 		for (i = 0; i < 5; i++) {
 			if (i < numStars) {
@@ -17,10 +18,10 @@ $(function() {
 				glyphClass = 'glyphicon-star-empty';
 			}
 
-			stars.append($('<span>').addClass('glyphicon ' + glyphClass));
+			$stars.append($('<span>').addClass('glyphicon ' + glyphClass));
 		}
 		
-		$('#num-stars').html(stars);
+		$('#num-stars').html($stars);
 	};
 
 	$('#stars').on('change', function() {

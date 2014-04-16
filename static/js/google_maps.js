@@ -14,7 +14,7 @@ $(function() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
 
-	$.each($('.review-nodule'), function() {
+	$.each($('.review-node'), function() {
 		location = $(this).find('.location').text();
 		map = new google.maps.Map($(this).find('.map')[0], options);
 

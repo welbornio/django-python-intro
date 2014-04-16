@@ -27,34 +27,30 @@
         <div class="page-wrapper">
             <!-- header-11 -->
             <header>
-              <nav class="navbar navbar-default" role="navigation">
-    			  <div class="container-fluid">
-    			    <!-- Brand and toggle get grouped for better mobile display -->
-    			    <div class="navbar-header">
-    			      <a class="navbar-brand" href="#">Hotel Reviews</a>
-    			    </div>
+              <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="#">Hotel Reviews</a>
+			    </div>
 
-    			    <!-- Collect the nav links, forms, and other content for toggling -->
-    			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    			      <ul class="nav navbar-nav">
-    			        <li class="dropdown">
-    			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Look Around <b class="caret"></b></a>
-    			          <ul class="dropdown-menu">
-    			            <li><a href="{% url home %}">Home</a></li>
-    			            <li><a href="{% url about %}">About</a></li>
-    			            <li><a href="{% url reviews %}">Reviews</a></li>
-    			          </ul>
-    			        </li>
-    			      </ul>
-    			    </div><!-- /.navbar-collapse -->
-    			  </div><!-- /.container-fluid -->
-    			</nav>
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Look Around <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="{% url home %}">Home</a></li>
+			            <li><a href="{% url about %}">About</a></li>
+			            <li><a href="{% url reviews %}">Reviews</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
             </header>
 
-            <div class='container'>
-            	{% block content %}
-    			{% endblock content %}
-            </div>
+            {% block content %}
+			{% endblock content %}
 
         </div>
 
@@ -64,5 +60,6 @@
         <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <script src="{% static 'js/add_review.js' %}"></script>
         <script src="{% static 'js/google_maps.js' %}"></script>
+        <script src="{% static 'js/view_reviews.js' %}"></script>
     </body>
 </html>
