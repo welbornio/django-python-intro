@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    {% for review in reviews %}
+        <div id='view-review' class='col-lg-12 review-nodule jumbotron'>
+            <p>Title: <span class='title'>{{ review.title }}</span></p>
+            <p>Location: <span class='location'>{{ review.location }}</span></p>
+            <p>Review: <span class='review'>{{ review.description }}</span></p>
+            <p><a href='/review/{{ review.id }}'>Check this review out.</a></p>
+            <div class='map' id="map-canvas" style="width: 320px; height: 320px"></div>
+        </div>
+    {% endfor %}
+{% endblock content %}

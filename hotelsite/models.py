@@ -12,11 +12,13 @@ class Review(db.Model):
 	title 				= db.StringProperty(required=True)
 	star_rating 	= db.IntegerProperty(default=0)
 	date					= db.DateProperty()
+	identifier 		= db.StringProperty()
 
 	meta = {
 		'indexes': [
 			'location',
 			'title',
-			'star_rating'
+			'star_rating',
+			'id'
 		]
 	}
