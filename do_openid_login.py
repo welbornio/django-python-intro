@@ -8,7 +8,6 @@
 # Python imports
 
 # AppEngine Imports
-from google.appengine.ext import webapp
 from google.appengine.ext.webapp import template
 
 # Our App imports

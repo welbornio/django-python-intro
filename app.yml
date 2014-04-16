@@ -4,7 +4,12 @@ runtime: python27
 api_version: 1
 threadsafe: no
 
+
 handlers:
+
+- url: /_ah/mail/.+
+  script: handle_incoming_email.py
+  login: admin
 
 - url: /_ah/login_required
   script: do_openid_login.py
@@ -20,10 +25,15 @@ handlers:
   script: main.application
 
 
+inbound_services:
+- mail
+
+
 libraries:
 
 - name: django
   version: "1.4"
+
 
 env_variables:
   DJANGO_SETTINGS_MODULE: 'hotelreviews.settings'
